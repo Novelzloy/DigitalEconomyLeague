@@ -8,9 +8,6 @@
 import UIKit
 import Foundation
 
-import UIKit
-import Foundation
-
 enum CaloriesCalculatorType {
     case mifflin
     case harrisBenedict
