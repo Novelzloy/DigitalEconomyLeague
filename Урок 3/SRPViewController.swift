@@ -27,6 +27,7 @@ struct Nutrients {
 protocol CaloriesCalculation {
     func calculationProrortion(proportionType: ProportionType) -> Nutrients
 }
+
 protocol ProportionCalculation {
     func calculationTargetColorias(caloriesCalculationType: CaloriesCalculatorType) -> Int
 }
