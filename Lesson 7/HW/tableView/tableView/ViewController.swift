@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 300
         tableView.rowHeight = UITableView.automaticDimension
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: customTableViewCellIdentifier)
         tableView.register(CustomHeaderView.self, forHeaderFooterViewReuseIdentifier: customTableViewHeaderIdentifier)
@@ -63,11 +64,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     internal func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
-    
 }
 
 extension ViewController {
-    private func configureView(){
+    private func configureView() {
         view.addSubview(tableView)
         
         NSLayoutConstraint.activate([
@@ -96,7 +96,5 @@ extension ViewController {
             tableView.insertRows(at: indexPaths, with: .fade)
         }
     }
-    
-    
 }
 
