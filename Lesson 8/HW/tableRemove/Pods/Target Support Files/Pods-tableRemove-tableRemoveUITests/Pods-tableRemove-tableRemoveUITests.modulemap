@@ -1,0 +1,6 @@
+framework module Pods_tableRemove_tableRemoveUITests {
+  umbrella header "Pods-tableRemove-tableRemoveUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
