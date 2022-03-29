@@ -118,17 +118,15 @@ extension CustomViewController {
     func showAlert(section: Int) {
         let alert = UIAlertController(title: "Add your product from the store", message: "", preferredStyle: .alert)
         
-        alert.addTextField { UITextField in }
+        alert.addTextField()
         alert.addAction(UIAlertAction(title: "Continue", style: .default, handler: { [weak self] UIAlertAction in
             let foodItem = (alert.textFields![0] as UITextField).text
-            DispatchQueue.main.async {
                 guard let self = self, let foodItem = foodItem else { return }
                 let food = Food(nameFood: foodItem)
                 self.model[section].itemToList.append(food)
                 self.tableView.beginUpdates()
                 self.tableView.insertRows(at: [IndexPath.init(row: self.model[section].itemToList.count - 1, section: section)], with: .fade)
                 self.tableView.endUpdates()
-            }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         self.present(alert, animated: true, completion: nil)
