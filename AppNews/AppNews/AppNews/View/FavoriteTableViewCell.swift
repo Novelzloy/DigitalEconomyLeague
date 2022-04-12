@@ -26,7 +26,7 @@ class FavoriteTableViewCell: UITableViewCell {
         return label
     }()
     
-    private lazy var  imageNews: UIImageView = {
+    private lazy var imageNews: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .systemBackground
         imageView.contentMode = .scaleAspectFill
@@ -90,17 +90,17 @@ class FavoriteTableViewCell: UITableViewCell {
 extension FavoriteTableViewCell {
     
     func configureConstraint() {
-        tittleLabel.frame = CGRect (x: 10,
+        tittleLabel.frame = CGRect(x: 10,
                                     y: 0,
                                     width: contentView.frame.size.width - 170,
                                     height: 70
         )
-        descriptionLabel.frame = CGRect (x: 10,
+        descriptionLabel.frame = CGRect(x: 10,
                                          y: 70,
                                          width: contentView.frame.size.width - 170,
                                          height: contentView.frame.size.height / 2
         )
-        imageNews.frame = CGRect (x: contentView.frame.size.width - 150,
+        imageNews.frame = CGRect(x: contentView.frame.size.width - 150,
                                   y: 6,
                                   width: 140,
                                   height: contentView.frame.size.height - 10
